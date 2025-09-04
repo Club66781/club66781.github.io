@@ -75,16 +75,19 @@
     header h1 {
       font-family: 'Kode Mono';
       text-transform: uppercase;
-      font-size: 7rem;
+      font-weight: bold;
+      font-size: 10rem;
       background-size: cover;
       -webkit-background-clip: text;
       background-clip: text;
       -moz-text-fill-color: transparent;
       -webkit-text-fill-color: transparent;
       background-image: url(assets/tex.png);
-      background-size: 64px 64px;
+      background-size: 16px 16px;
       background-repeat: repeat;
-      letter-spacing: 8px;  
+      letter-spacing: 6px;
+      background-color: rgba(0, 0, 55, 0.3);
+      background-blend-mode: multiply;
     }
 
     header .tagline {
@@ -203,6 +206,7 @@
         background: rgba(0, 0, 0, 0.2);
       }
     }
+
 
 
 
