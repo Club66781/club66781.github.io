@@ -12,7 +12,6 @@
       background: #fff url('assets/bg3.gif') repeat;
       background-size: auto;
       color: #cfcfcf;
-      text-shadow: 0 0 5px #000;
       overflow-x: hidden;
     }
 
@@ -203,6 +202,7 @@
         background: rgba(0, 0, 0, 0.2);
       }
     }
+
 
 
 
