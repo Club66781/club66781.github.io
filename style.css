@@ -82,7 +82,8 @@
       background-clip: text;
       -moz-text-fill-color: transparent;
       -webkit-text-fill-color: transparent;
-      background-image: url(assets/texture3.gif), repeat;
+      background-image: url(assets/texture3.jpg), repeat;
+      background-repeat: repeat;
     }
 
     header .tagline {
@@ -201,6 +202,7 @@
         background: rgba(0, 0, 0, 0.2);
       }
     }
+
 
 
 
