@@ -74,17 +74,15 @@
     }
 
     header h1 {
-      font-family: 'Kode Mono';
+      font-family: 'Archivo Black', sans-serif;
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 11vw;
+      font-size: 5rem;
       background-size: cover;
       -webkit-background-clip: text;
       background-clip: text;
       -moz-text-fill-color: transparent;
       -webkit-text-fill-color: transparent;
-      margin: 6vw;
-      line-height: 10vw;
       background-image: url(assets/texture3.gif);
     }
 
@@ -204,6 +202,7 @@
         background: rgba(0, 0, 0, 0.2);
       }
     }
+
 
 
 
