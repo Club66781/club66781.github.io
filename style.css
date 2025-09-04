@@ -9,8 +9,8 @@
 
 body {
   font-family: 'Share Tech Mono', monospace;
-  background: #000 url('assets/bg.jpg') repeat-y, repeat-x;
-  background-size: auto auto;
+  background: #000 url('assets/bg.jpg');
+  background-size: auto;
   color: #cfcfcf;
   text-shadow: 0 0 5px #000;
   overflow-x: hidden;
@@ -157,5 +157,6 @@ footer {
   75% { transform: translate(-1px, -1px); }
   100% { transform: translate(0,0); }
 }
+
 
 
