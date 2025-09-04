@@ -74,7 +74,7 @@ header {
 header h1 {
   font-family: 'Kode Mono';
   font-size: 5rem;
-  background-image: url('assets/texture.png');
+  background-image: url('assets/texture.jpg');
   background-size: cover;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -194,6 +194,7 @@ footer {
     background: rgba(0, 0, 0, 0.2);
   }
 }
+
 
 
 
