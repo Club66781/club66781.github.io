@@ -75,15 +75,17 @@
 
     header h1 {
       font-family: 'Kode Mono';
-      font-size: 5rem;
-      background-image: url('assets/texture2.jpg');
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 11vw;
       background-size: cover;
       -webkit-background-clip: text;
       background-clip: text;
       -moz-text-fill-color: transparent;
       -webkit-text-fill-color: transparent;
-      letter-spacing: 5px;
-      /* animation: glitch 0.5s infinite; */
+      margin: 6vw;
+      line-height: 10vw;
+      background-image: url(assets/texture3.gif);
     }
 
     header .tagline {
@@ -202,6 +204,7 @@
         background: rgba(0, 0, 0, 0.2);
       }
     }
+
 
 
 
