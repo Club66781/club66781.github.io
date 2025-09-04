@@ -76,7 +76,7 @@
     header h1 {
       font-family: 'Kode Mono';
       font-size: 5rem;
-      background-image: url('assets/texture.jpg');
+      background-image: url('assets/texture.gif');
       background-size: cover;
       -webkit-background-clip: text;
       background-clip: text;
@@ -202,3 +202,4 @@
         background: rgba(0, 0, 0, 0.2);
       }
     }
+
