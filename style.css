@@ -98,7 +98,7 @@
     nav {
       position: relative;
       z-index: 10;
-      top: -20px;
+      top: -2px;
     }
 
     nav ul {
@@ -106,7 +106,7 @@
       display: flex;
       justify-content: center;
       gap: 2rem;
-      /*background: rgba(10, 10, 10, 0.85);*/
+      background: rgba(10, 10, 10, 0.85);
       padding: 1rem;
     }
 
@@ -209,6 +209,7 @@
         background: rgba(0, 0, 0, 0.2);
       }
     }
+
 
 
 
