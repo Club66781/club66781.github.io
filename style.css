@@ -9,7 +9,7 @@
 
     body {
       font-family: 'Kode Mono', monospace;
-      background: #fff url('assets/bg4.gif') repeat;
+      background: #fff url('assets/bg3.gif') repeat;
       background-size: auto;
       color: #cfcfcf;
       overflow-x: hidden;
@@ -76,18 +76,15 @@
       font-family: 'Kode Mono';
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 10rem;
-      background-size: cover;
-      -webkit-background-clip: text;
+      font-size: 6rem;
       background-clip: text;
-      -moz-text-fill-color: transparent;
       -webkit-text-fill-color: transparent;
-      background-image: url(assets/tex.png);
-      background-size: 16px 16px;
+      background-image: url(assets/texture3.jpg);
+      background-size: 64px 64px;
       background-repeat: repeat;
-      letter-spacing: 6px;
-      background-color: rgba(0, 0, 55, 0.3);
-      background-blend-mode: multiply;
+      letter-spacing: 12px;
+      background-color: rgba(185, 0, 255, 0.9);
+      background-blend-mode: luminosity;
     }
 
     header .tagline {
@@ -206,6 +203,7 @@
         background: rgba(0, 0, 0, 0.2);
       }
     }
+
 
 
 
