@@ -16,6 +16,18 @@ body {
   overflow-x: hidden;
 }
 
+.dark-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  pointer-events: none;
+  animation: flickerOverlay 6s infinite;
+}
+
 /* VHS Noise Overlay */
 .noise {
   background: url('assets/noise.gif');
@@ -156,6 +168,26 @@ footer {
   75% { transform: translate(-1px, -1px); }
   100% { transform: translate(0,0); }
 }
+
+/* Flicker animation */
+@keyframes flickerOverlay {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  20%, 22%, 55% {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  40% {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  70% {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  85% {
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+
 
 
 
