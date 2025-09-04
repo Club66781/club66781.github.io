@@ -80,9 +80,9 @@
       background-size: cover;
       -webkit-background-clip: text;
       background-clip: text;
+      -moz-text-fill-color: transparent;
       -webkit-text-fill-color: transparent;
-      color: transparent;
-      letter-spacing: 10px;
+      letter-spacing: 5px;
       /* animation: glitch 0.5s infinite; */
     }
 
@@ -202,5 +202,6 @@
         background: rgba(0, 0, 0, 0.2);
       }
     }
+
 
 
