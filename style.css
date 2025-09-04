@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
 
 * {
   margin: 0;
@@ -60,11 +60,12 @@ header {
 }
 
 header h1 {
-  font-family: 'Creepster', cursive;
-  font-size: 6rem;
-  color: #ff1a1a;
-  text-shadow: 2px 2px 15px black, 0 0 20px #f00;
-  animation: glitch 2s infinite;
+  font-family: 'Kode Mono';
+  font-size: 5rem;
+  color: #000000;
+  letter-spacing: 10px;
+  text-shadow: 4px 2px 15px black, 0 0 20px #f00;
+  animation: glitch 0.5s infinite;
 }
 
 header .tagline {
@@ -143,11 +144,11 @@ footer {
 }
 
 @keyframes glitch {
-  0% { text-shadow: 2px 2px red, -2px -2px blue; }
-  20% { text-shadow: -2px -2px red, 2px 2px blue; }
-  40% { text-shadow: 2px -2px red, -2px 2px blue; }
-  60% { text-shadow: -2px 2px red, 2px -2px blue; }
-  100% { text-shadow: 2px 2px red, -2px -2px blue; }
+  0% { text-shadow: 2px 2px black, -2px -2px #732984; }
+  20% { text-shadow: -2px -2px #732984, 2px 2px black; }
+  40% { text-shadow: 2px -2px black, -2px 2px #732984; }
+  60% { text-shadow: -2px 2px #732984, 2px -2px black; }
+  100% { text-shadow: 2px 2px black, -2px -2px #732984; }
 }
 
 @keyframes jitter {
