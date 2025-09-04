@@ -78,6 +78,7 @@ header h1 {
   letter-spacing: 10px;
   text-shadow: 4px 2px 15px black, 0 0 20px #f00;
   animation: glitch 0.5s infinite;
+  z-index: 10000;
 }
 
 header .tagline {
@@ -115,7 +116,7 @@ main {
   border: 1px solid #333;
   box-shadow: 0 0 20px black;
   animation: jitter 0.1s infinite;
-  z-index: 20;
+  z-index: 10000;
 }
 
 section {
@@ -173,21 +174,22 @@ footer {
 /* Flicker animation */
 @keyframes flickerOverlay {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    background: rgba(0, 0, 0, 0.5);
-  }
-  20%, 22%, 55% {
     background: rgba(0, 0, 0, 0.3);
   }
+  20%, 22%, 55% {
+    background: rgba(0, 0, 0, 0.1);
+  }
   40% {
-    background: rgba(0, 0, 0, 0.6);
-  }
-  70% {
-    background: rgba(0, 0, 0, 0.7);
-  }
-  85% {
     background: rgba(0, 0, 0, 0.4);
   }
+  70% {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  85% {
+    background: rgba(0, 0, 0, 0.2);
+  }
 }
+
 
 
 
