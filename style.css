@@ -9,7 +9,7 @@
 
     body {
       font-family: 'Kode Mono', monospace;
-      background: #fff url('assets/bg3.gif') repeat;
+      background: #fff url('assets/bg4.gif') repeat;
       background-size: auto;
       color: #cfcfcf;
       overflow-x: hidden;
@@ -81,9 +81,9 @@
       background-clip: text;
       -moz-text-fill-color: transparent;
       -webkit-text-fill-color: transparent;
-      background-image: url(assets/texture.gif);
+      background-image: url(assets/tex.png);
       background-repeat: repeat;
-      background-size: 64px 64px;
+      letter-spacing: 8px;  
     }
 
     header .tagline {
@@ -202,6 +202,7 @@
         background: rgba(0, 0, 0, 0.2);
       }
     }
+
 
 
 
