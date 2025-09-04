@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Share+Tech+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: url('assets/cursor.png'), auto;
+}
+
+body {
+  font-family: 'Share Tech Mono', monospace;
+  background: #000 url('assets/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #cfcfcf;
+  text-shadow: 0 0 5px #000;
+  overflow-x: hidden;
+}
+
+/* VHS Noise Overlay */
+.noise {
+  background: url('assets/noise.gif');
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* CRT Scanlines */
+.scanlines {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.2) 0px,
+    rgba(0,0,0,0.2) 1px,
+    transparent 2px,
+    transparent 3px
+  );
+  pointer-events: none;
+  z-index: 9998;
+  mix-blend-mode: multiply;
+}
+
+/* Vignette effect */
+.vignette {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent 70%, rgba(0,0,0,0.9) 100%);
+  z-index: 9997;
+  pointer-events: none;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+header h1 {
+  font-family: 'Creepster', cursive;
+  font-size: 6rem;
+  color: #ff1a1a;
+  text-shadow: 2px 2px 15px black, 0 0 20px #f00;
+  animation: glitch 2s infinite;
+}
+
+header .tagline {
+  font-size: 1.4rem;
+  color: #aaa;
+  letter-spacing: 3px;
+  animation: flicker 3s infinite;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: rgba(10, 10, 10, 0.85);
+  padding: 1rem;
+  border-top: 2px solid #700;
+  border-bottom: 2px solid #700;
+}
+
+nav a {
+  color: #f33;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: rgba(20, 20, 20, 0.75);
+  border: 1px solid #333;
+  box-shadow: 0 0 20px black;
+  animation: jitter 0.1s infinite;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-family: 'Creepster', cursive;
+  color: #e33;
+  margin-bottom: 1rem;
+}
+
+.project {
+  background: rgba(0,0,0,0.5);
+  border: 1px solid #222;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+}
+
+.project:hover {
+  transform: scale(1.02) rotate(-1deg);
+  background: rgba(30,0,0,0.6);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Animations */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+  20%, 22%, 55% { opacity: 0.4; }
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 2px red, -2px -2px blue; }
+  20% { text-shadow: -2px -2px red, 2px 2px blue; }
+  40% { text-shadow: 2px -2px red, -2px 2px blue; }
+  60% { text-shadow: -2px 2px red, 2px -2px blue; }
+  100% { text-shadow: 2px 2px red, -2px -2px blue; }
+}
+
+@keyframes jitter {
+  0% { transform: translate(0,0); }
+  25% { transform: translate(-1px, 1px); }
+  50% { transform: translate(1px, -1px); }
+  75% { transform: translate(-1px, -1px); }
+  100% { transform: translate(0,0); }
+}
