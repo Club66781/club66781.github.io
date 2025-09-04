@@ -81,7 +81,7 @@
       background-clip: text;
       -moz-text-fill-color: transparent;
       -webkit-text-fill-color: transparent;
-      background-image: url(assets/texture3.gif);
+      background-image: url(assets/texture.gif);
       background-repeat: repeat;
       background-size: 64px 64px;
     }
@@ -202,6 +202,7 @@
         background: rgba(0, 0, 0, 0.2);
       }
     }
+
 
 
 
