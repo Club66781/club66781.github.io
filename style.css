@@ -82,6 +82,7 @@
       -moz-text-fill-color: transparent;
       -webkit-text-fill-color: transparent;
       background-image: url(assets/tex.png);
+      background-size: 64px 64px;
       background-repeat: repeat;
       letter-spacing: 8px;  
     }
@@ -202,6 +203,7 @@
         background: rgba(0, 0, 0, 0.2);
       }
     }
+
 
 
 
