@@ -1,212 +1,204 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  cursor: url('assets/cursor.png'), auto;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      cursor: url('assets/cursor.png'), auto;
+    }
 
-body {
-  font-family: 'Kode Mono', monospace;
-  background: #fff url('assets/bg3.gif') repeat;
-  background-size: auto;
-  color: #cfcfcf;
-  text-shadow: 0 0 5px #000;
-  overflow-x: hidden;
-}
+    body {
+      font-family: 'Kode Mono', monospace;
+      background: #fff url('assets/bg3.gif') repeat;
+      background-size: auto;
+      color: #cfcfcf;
+      text-shadow: 0 0 5px #000;
+      overflow-x: hidden;
+    }
 
-.dark-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-  pointer-events: none;
-  animation: flickerOverlay 6s infinite;
-}
+    .dark-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      pointer-events: none;
+      animation: flickerOverlay 6s infinite;
+    }
 
-/* VHS Noise Overlay */
-.noise {
-  background: url('assets/noise.gif');
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  opacity: 0.15;
-  pointer-events: none;
-  z-index: 9998;
-}
+    /* VHS Noise Overlay */
+    .noise {
+      background: url('assets/noise.gif');
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 2;
+    }
 
-/* CRT Scanlines */
-.scanlines {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.2) 0px,
-    rgba(0,0,0,0.2) 1px,
-    transparent 2px,
-    transparent 3px
-  );
-  pointer-events: none;
-  z-index: 9997;
-  mix-blend-mode: multiply;
-}
+    /* CRT Scanlines */
+    .scanlines {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.2) 0px,
+        rgba(0,0,0,0.2) 1px,
+        transparent 2px,
+        transparent 3px
+      );
+      pointer-events: none;
+      z-index: 3;
+      mix-blend-mode: multiply;
+    }
 
-/* Vignette effect */
-.vignette {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, transparent 70%, rgba(0,0,0,0.9) 100%);
-  z-index: 9996;
-  pointer-events: none;
-}
+    /* Vignette effect */
+    .vignette {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, transparent 70%, rgba(0,0,0,0.9) 100%);
+      z-index: 4;
+      pointer-events: none;
+    }
 
-header {
-  text-align: center;
-  padding: 3rem 1rem;
-}
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      position: relative;
+      z-index: 10;
+    }
 
-header h1 {
-  font-family: 'Kode Mono';
-  font-size: 5rem;
-  background-image: url('assets/texture.jpg');
-  background-size: cover;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  letter-spacing: 10px;
-  text-shadow: 4px 2px 15px black, 0 0 20px #f00;
-  /* animation: glitch 0.5s infinite; */
-  z-index: 9999;
-}
+    header h1 {
+      font-family: 'Kode Mono';
+      font-size: 5rem;
+      background-image: url('assets/texture.jpg');
+      background-size: cover;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      letter-spacing: 10px;
+      /* animation: glitch 0.5s infinite; */
+    }
 
-header .tagline {
-  font-size: 1.4rem;
-  color: #aaa;
-  letter-spacing: 3px;
-  animation: flicker 3s infinite;
-}
+    header .tagline {
+      font-size: 1.4rem;
+      color: #aaa;
+      letter-spacing: 3px;
+      animation: flicker 3s infinite;
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  background: rgba(10, 10, 10, 0.85);
-  padding: 1rem;
-}
+    nav {
+      position: relative;
+      z-index: 10;
+    }
 
-nav a {
-  color: #732984;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.2s;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: rgba(10, 10, 10, 0.85);
+      padding: 1rem;
+    }
 
-nav a:hover {
-  color: #fff;
-}
+    nav a {
+      color: #732984;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
 
-main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background: rgba(20, 20, 20, 0.75);
-  border: 1px solid #333;
-  box-shadow: 0 0 20px black;
-  animation: jitter 0.1s infinite;
-  z-index: 9999;
-}
+    nav a:hover {
+      color: #fff;
+    }
 
-section {
-  margin-bottom: 3rem;
-}
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: rgba(20, 20, 20, 0.75);
+      border: 1px solid #333;
+      box-shadow: 0 0 20px black;
+      animation: jitter 0.1s infinite;
+      position: relative;
+      z-index: 10;
+    }
 
-h2 {
-  font-family: 'Kode Mono', monospace;
-  color: #732984;
-  margin-bottom: 1rem;
-}
+    section {
+      margin-bottom: 3rem;
+    }
 
-.project {
-  background: rgba(0,0,0,0.5);
-  border: 1px solid #222;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  transition: transform 0.2s;
-}
+    h2 {
+      font-family: 'Kode Mono', monospace;
+      color: #732984;
+      margin-bottom: 1rem;
+    }
 
-.project:hover {
-  transform: scale(1.02) rotate(-1deg);
-  background: rgba(30,0,0,0.6);
-}
+    .project {
+      background: rgba(0,0,0,0.5);
+      border: 1px solid #222;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      transition: transform 0.2s;
+    }
 
-footer {
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.8rem;
-  color: #666;
-}
+    .project:hover {
+      transform: scale(1.02) rotate(-1deg);
+      background: rgba(30,0,0,0.6);
+    }
 
-/* Animations */
-@keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
-  20%, 22%, 55% { opacity: 0.4; }
-}
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: #666;
+      position: relative;
+      z-index: 10;
+    }
 
-@keyframes glitch {
-  0% { text-shadow: 2px 2px black, -2px -2px #732984; }
-  20% { text-shadow: -2px -2px #732984, 2px 2px black; }
-  40% { text-shadow: 2px -2px black, -2px 2px #732984; }
-  60% { text-shadow: -2px 2px #732984, 2px -2px black; }
-  100% { text-shadow: 2px 2px black, -2px -2px #732984; }
-}
+    /* Animations */
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+      20%, 22%, 55% { opacity: 0.4; }
+    }
 
-@keyframes jitter {
-  0% { transform: translate(0,0); }
-  25% { transform: translate(-1px, 1px); }
-  50% { transform: translate(1px, -1px); }
-  75% { transform: translate(-1px, -1px); }
-  100% { transform: translate(0,0); }
-}
+    @keyframes glitch {
+      0% { text-shadow: 2px 2px black, -2px -2px #732984; }
+      20% { text-shadow: -2px -2px #732984, 2px 2px black; }
+      40% { text-shadow: 2px -2px black, -2px 2px #732984; }
+      60% { text-shadow: -2px 2px #732984, 2px -2px black; }
+      100% { text-shadow: 2px 2px black, -2px -2px #732984; }
+    }
 
-/* Flicker animation */
-@keyframes flickerOverlay {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    background: rgba(0, 0, 0, 0.3);
-  }
-  20%, 22%, 55% {
-    background: rgba(0, 0, 0, 0.1);
-  }
-  40% {
-    background: rgba(0, 0, 0, 0.4);
-  }
-  70% {
-    background: rgba(0, 0, 0, 0.5);
-  }
-  85% {
-    background: rgba(0, 0, 0, 0.2);
-  }
-}
+    @keyframes jitter {
+      0% { transform: translate(0,0); }
+      25% { transform: translate(-1px, 1px); }
+      50% { transform: translate(1px, -1px); }
+      75% { transform: translate(-1px, -1px); }
+      100% { transform: translate(0,0); }
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    /* Flicker animation */
+    @keyframes flickerOverlay {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        background: rgba(0, 0, 0, 0.3);
+      }
+      20%, 22%, 55% {
+        background: rgba(0, 0, 0, 0.1);
+      }
+      40% {
+        background: rgba(0, 0, 0, 0.4);
+      }
+      70% {
+        background: rgba(0, 0, 0, 0.5);
+      }
+      85% {
+        background: rgba(0, 0, 0, 0.2);
+      }
+    }
