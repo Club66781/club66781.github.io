@@ -78,7 +78,7 @@
       text-transform: lowercase;
       font-weight: bold;
       font-size: 4rem;
-      background: rgba(185, 0, 255, 0.9) url(assets/texture3.jpg);
+      background: rgba(185, 0, 255, 0.9) url(assets/texture4.gif);
       background-size: 64px 64px;
       background-repeat: repeat;
       background-blend-mode: luminosity;
@@ -209,6 +209,7 @@
         background: rgba(0, 0, 0, 0.2);
       }
     }
+
 
 
 
