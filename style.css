@@ -78,7 +78,7 @@
       text-transform: lowercase;
       font-weight: bold;
       font-size: 4rem;
-      background: rgba(185, 0, 255, 0.9) url(assets/texture4.gif);
+      background: rgba(185, 0, 255, 0.9) url(assets/bg3.gif);
       background-size: 64px 64px;
       background-repeat: repeat;
       background-blend-mode: luminosity;
@@ -153,13 +153,13 @@
 
     .project:hover {
       transform: scale(1.02) rotate(-1deg);
-      background: rgba(30,0,0,0.6);
+      background: rgba(50,0,50,0.6);
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      font-size: 0.8rem;
+      font-size: 2rem;
       color: #666;
       position: relative;
       z-index: 10;
@@ -209,6 +209,7 @@
         background: rgba(0, 0, 0, 0.2);
       }
     }
+
 
 
 
